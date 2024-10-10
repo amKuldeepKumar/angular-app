@@ -1,0 +1,12 @@
+<!-- progress-bar.component.html -->
+<ng-container *ngIf="isVisible">
+    <div class="overlay">
+      <mat-progress-bar 
+        class="progress-bar"
+        [mode]="mode" 
+        [value]="mode === 'determinate' ? value : null" 
+        [color]="color">
+      </mat-progress-bar>
+    </div>
+  </ng-container>
+  

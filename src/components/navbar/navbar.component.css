@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+
+  .menuItems{
+    display: grid;
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .menu-button{
+    border: none;
+    cursor: pointer;
+    background-color:white;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+  }
+  .example-icon{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  mat-toolbar.mat-toolbar.mat-toolbar-single-row{
+    background-color: white;
+  }

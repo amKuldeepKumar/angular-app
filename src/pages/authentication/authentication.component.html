@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="partition partition-60">
+    <div class="info-container">
+
+      <p class=" text primary-text">60 Years of Legal Excellence <br><br> Your trusted Solicitors</p>
+      <br>
+      <p class="text secondary-text">
+        Serving the local & National  Community <br> since 1964
+      </p>
+    </div>
+  </div>
+
+  <div class="partition partition-40">
+    <div class="centered-card">
+      <img src="/image.png" alt="My Image" class="logo">
+
+      <mat-card-header>
+        <mat-card-title class="title">{{ activeForm === 'login' ? 'Welcome Back' : 'Create an Account' }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <!-- Login Form -->
+        <form [formGroup]="loginForm" *ngIf="activeForm === 'login'">
+          <app-textinput formControlName="email" label="Email" type="email" placeholder="Enter your email" />
+          <app-textinput formControlName="password" label="Password" type="password" placeholder="Enter your password" />
+          <p>Don't have an Account? 
+            <span class="link-button" (click)="changeForm('signup')">Signup</span>
+          </p>
+          <mat-card-actions>
+            <button class="btn btn-login" mat-raised-button   type="submit" (click)="onSubmit()">Login</button>
+          </mat-card-actions>
+        </form>
+
+        <!-- Signup Form -->
+        <form [formGroup]="signupForm" *ngIf="activeForm === 'signup'">
+          <app-textinput formControlName="name" label="Name" type="text" placeholder="Enter your name" />
+          <app-textinput formControlName="email" label="Email"  type="email" placeholder="Enter your email" />
+          <app-textinput formControlName="mobile" label="Mobile" type="text" placeholder="Enter your mobile" />
+          <app-textinput formControlName="password" label="Password" type="password" placeholder="Enter your password" />
+          <p>Already have an Account? 
+            <span class="link-button" (click)="changeForm('login')">Login</span>
+          </p>
+          <mat-card-actions>
+            <button mat-raised-button class="btn" type="submit" (click)="onSubmit()">Sign-Up</button>
+          </mat-card-actions>
+        </form>
+
+        <p class="divider">or continue using</p>
+
+        <mat-card-actions>
+          <div class="action-buttons">
+              <button class="social-button facebook-button" (click)="signInWithFacebook()">Facebook</button>
+            <button class="social-button google-button" (click)="signInWithGoogle()">Google</button>
+          </div>
+        </mat-card-actions>
+      </mat-card-content>
+    </div>
+  </div>
+</div>

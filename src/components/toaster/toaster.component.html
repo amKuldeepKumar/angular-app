@@ -1,0 +1,8 @@
+<div class="toaster-container" *ngIf="toasts.length > 0">
+    <div class="toast" *ngFor="let toast of toasts" [ngClass]="toast.type">
+      <span>{{ toast.message }}</span>
+      
+      <button (click)="removeToast(toast)">X</button>
+    </div>
+  </div>
+  

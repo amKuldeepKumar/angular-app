@@ -1,0 +1,56 @@
+<mat-toolbar class="toolbar">
+    <div class="heading">
+      <p>Your Will <br>Section {{currentCard}} to 8</p>
+    </div>
+  </mat-toolbar>
+  
+  <div class="card-container" *ngIf="currentTab === 'MENU'">
+    <div *ngFor="let card of allCards; let i = index">
+
+        <app-questionarcard
+        [currentCard]="currentCard===card.name"
+        index={{card.index}}
+        name={{card.name}}
+        title={{card?.label}}
+        status={{card.status}}
+        [step]="(i + 1).toString()"
+        [isCompleted]="true"
+        buttonLabel="Continue"
+        skipLabel="Skip"
+        infoText="If you don’t own any property you can skip this section"
+        (buttonClick)="handleContinue(card)"
+        (skipClick)="handleSkip(card)"
+        (cardClick)="handleCardClick(card)"
+        >
+      </app-questionarcard>
+    </div>
+    
+  </div>
+  
+  <div *ngIf="currentTab !== 'MENU'">
+
+    <div class="personalInfo" *ngIf="currentTab === 'PERSONALDETAILS'">
+      <div *ngFor="let question of questions1">
+        <app-textinput *ngIf="question.type === 'text' || question.type === 'email' || question.type === 'date'" placeholder="{{ question.placeholder }}" value={{willInformation.personalDetails[question.name]}} name="{{ question.name }}" [type]="question.type" (valueChange)="onInputChange($event)"></app-textinput>
+        <app-numberinput *ngIf="question.type==='number'"  maxLength={{question.maxLength}} placeholder="{{question.placeholder}}" name="{{question.name}}" value={{willInformation.personalDetails[question.name]}} (valueChange)="onInputChange($event)"  [type]="'number'"></app-numberinput>
+        <app-selectinput *ngIf="question.type==='select'"  label={{question.placeholder}} [items]="question?.options || []"  name={{question.name}} value={{willInformation.personalDetails[question.name]}} (valueChange)="handleSelectChange($event)" [disabled]="false">
+        
+        </app-selectinput>
+        <label>{{question?.infoText}}</label>
+      </div>
+    </div>
+
+    <div class="personalInfo" *ngIf="currentTab === 'PERSONALDETAILS2'">
+      <div *ngFor="let question of questions2">
+        <app-radioinput *ngIf="question?.type === 'radio'" [label]="question.label" [items]="question?.options || []" [name]="question.name" [value]="willInformation.personalDetails[question.name]" (valueChange)="handleRadioChange($event)" [disabled]="false">  </app-radioinput>
+
+      </div>
+    </div>
+
+    <div class="footer-button">
+      <button class="btn btn-back" (click)="handleBackClick()">back</button>
+      <button class="btn btn-next" (click)="handleNextClick()">next</button>
+    </div>
+    
+  </div>
+  

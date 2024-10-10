@@ -1,0 +1,14 @@
+<mat-form-field  [appearance]="appearance" class="full-width">
+    <input
+      class="full-width"
+      matInput
+      [type]="type"
+      maxlength="5"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      [value]="value"
+      [name]="name"
+      (input)="handleInputChange($event)"
+    />
+  </mat-form-field>
+  

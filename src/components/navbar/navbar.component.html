@@ -1,0 +1,22 @@
+<mat-toolbar>
+    <img src="/image.png" alt="My Image" class="logo" height="100%">
+      <span class="example-spacer"></span>
+  
+  <button *ngIf="isLoggedIn()" (click)="doLogout()" mat-icon-button class="example-icon"   aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu" >
+  <div class="menuItems">
+   
+    <button class="menu-button" mat-menu-item (click)="yourSecondAction()">
+       Action
+    </button>
+    <button  *ngIf="isLoggedIn()" (click)="doLogout()" class="menu-button" mat-menu-item>
+    <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</mat-menu>
+
+

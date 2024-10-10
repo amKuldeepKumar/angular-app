@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.example-form {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.mat-mdc-form-field {
+  width: 100%;
+}
+/* input.component.css */
+mat-radio-button {
+  display: block; /* Ensures each radio button occupies its own line */
+  margin-bottom: 8px; /* Space between radio buttons */
+}
+
+
+.partition {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.partition-60 {
+  flex-basis: 70%;
+  background: linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.5),
+      rgba(35, 38, 38, 0.5)
+    ),
+    url("https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  filter: brightness(1.8);
+  background-position: center;
+}
+.info-container {
+  // display: flex;
+  margin: 100px;
+  margin-top: 25%;
+}
+
+.text {
+  color: white;
+}
+
+.primary-text {
+  font-size: 40px;
+
+  font-family: Georgia;
+}
+.secondary-text {
+  margin-top: -30px;
+}
+
+.partition-40 {
+  flex-basis: 30%;
+}
+
+
+
+@media (max-width: 600px) {
+  .partition-60 {
+    display: none;
+  }
+  .partition-40 {
+    flex: 0 0 100%;
+  }
+}
+
+
+.full-image {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  width: 300px;
+  filter: brightness(1.4);
+  height: auto;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  height: 40px;
+  transition: background 0.3s;
+}
+
+.btn {
+  width: 100%;
+  color: white !important;
+}
+.btn-login {
+  background-color: #40bd37 !important;
+  border-radius: 20px;
+}
+
+button:hover {
+  filter: brightness(0.9);
+}
+
+.link-button {
+  color: blue;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.social-button {
+  height: 40px;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.google-button {
+  background: #d04332;
+  margin-left: 10px;
+  width: 50%;
+}
+
+.facebook-button {
+  background-color: #3b5998;
+  margin-right: 10px;
+  width: 50%;
+}
+
+.facebook-button img .logo {
+  height: 10px;
+}

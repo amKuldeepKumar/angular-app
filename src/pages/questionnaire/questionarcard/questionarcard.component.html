@@ -1,0 +1,15 @@
+<div class="card"(click)="handleCardClick({index, title,status})"  id="card"  [ngClass]="{'currentCard': currentCard }" [ngClass]="{ 'statusCompleted': status==='COMPLETED' }" [ngClass]="{ 'statusSkipped': status==='SKIPPED' }">
+    <div class="card-header">
+        <div class="card-title">
+            <span class="step-number">{{ index }}</span>
+            <span class="title">{{ title }}</span>
+        </div>
+        <span class="status" *ngIf="status==='COMPLETED'">✔️</span>
+    </div>
+
+    <div class="card-actions">
+        <button *ngIf="step===index" mat-button (click)="onSkipClick()">{{ skipLabel}}</button>
+        <button *ngIf="step===index" mat-raised-button color="primary" (click)="onButtonClick()">{{ buttonLabel }}</button>
+    </div>
+    
+</div>

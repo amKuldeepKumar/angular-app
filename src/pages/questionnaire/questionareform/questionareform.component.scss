@@ -1,0 +1,50 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust spacing between cards */
+}
+
+
+.personalInfo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 16px; /* Adjust spacing between personal info items */
+}
+
+.personalInfo > div,
+.card-container > div {
+  flex: 1 1 calc(50% - 16px); /* Two cards per row */
+}
+
+.toolbar {
+  min-height: 90px;
+  padding: 0;
+  width: 100%;
+  background-color: #40bd37;
+  margin-bottom: 20px;
+}
+
+.heading p {
+  color: white;
+  margin: 10px 0 0 30px; 
+
+}
+
+.footer-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  border: none;
+}
+
+.btn-next {
+  background-color: rgba(40, 40, 99, 0.489);
+}

@@ -1,0 +1,34 @@
+<!-- button.component.html -->
+<button
+  mat-raised-button
+  *ngIf="variant === 'raised'"
+  [color]="color"
+  [disabled]="disabled"
+  [type]="type"
+  (click)="onClick()">
+  <ng-container *ngIf="icon && iconPosition === 'start'">
+    <mat-icon>{{ icon }}</mat-icon>
+  </ng-container>
+  {{ label }}
+  <ng-container *ngIf="icon && iconPosition === 'end'">
+    <mat-icon>{{ icon }}</mat-icon>
+  </ng-container>
+</button>
+
+<button
+  mat-flat-button
+  *ngIf="variant === 'flat'"
+  [color]="color"
+  [disabled]="disabled"
+  [type]="type"
+  (click)="onClick()">
+  <ng-container *ngIf="icon && iconPosition === 'start'">
+    <mat-icon>{{ icon }}</mat-icon>
+  </ng-container>
+  {{ label }}
+  <ng-container *ngIf="icon && iconPosition === 'end'">
+    <mat-icon>{{ icon }}</mat-icon>
+  </ng-container>
+</button>
+
+<!-- Add more button types as needed -->

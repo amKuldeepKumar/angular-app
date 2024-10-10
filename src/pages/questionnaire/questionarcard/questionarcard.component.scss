@@ -1,0 +1,65 @@
+.card {
+    background-color: #fff; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding inside the card */
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Card shadow */
+    margin: 16px; /* Space around the card */
+    height: 40px;
+    background-color: #FEDFDF;
+}
+
+.statusCompleted{
+    background-color: #fff;
+    border: 2px solid greenyellow;
+}
+
+
+.currentCard{
+    border: 2px solid #40BD37 !important;
+
+}
+
+
+.statusSkipped{
+    background-color: #FEDFDF;
+}
+
+
+.card:hover{
+    cursor: pointer;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and status */
+    align-items: center; /* Center items vertically */
+}
+
+.card-title {
+    display: flex;
+    align-items: center; /* Center step number and title */
+}
+
+.step-number {
+    font-weight: bold; /* Make the step number bold */
+    margin-right: 8px; /* Space between step number and title */
+}
+
+.card-content {
+    margin: 16px 0; /* Space above and below content */
+}
+
+.info-text {
+    color: #666; /* Light gray text */
+}
+
+.card-actions {
+    display: block;
+    // min-height: 60px;
+    display: flex; /* Arrange buttons in a row */
+    justify-content: flex-end; /* Align buttons to the right */
+}
+
+.card-actions button {
+    margin-left: 8px; /* Space between buttons */
+}
